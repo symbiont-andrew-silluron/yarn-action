@@ -40,11 +40,4 @@ action "Publish" {
 
 ## Node Versions
 
-Specify different branch name in `uses` to leverage node version.
-
-```hcl
-action "Build" {
-  uses = "nuxt/actions-yarn@node-11"
-  args = "install"
-}
-```
+Make sure you include an `.nvmrc` file at the root of the project to install the correct version of node
