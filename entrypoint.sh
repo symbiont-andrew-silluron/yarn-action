@@ -9,6 +9,7 @@ echo 'nvm_get_arch() { nvm_echo "x64-musl"; }' >> $HOME/.profile;
 NVM_DIR="$HOME/.nvm"; source $HOME/.nvm/nvm.sh; source $HOME/.profile;
 cd ./api
 nvm install
+sh -c "yarn install"
 
 if [ -n "$NPM_AUTH_TOKEN" ]; then
   # Respect NPM_CONFIG_USERCONFIG if it is provided, default to $HOME/.npmrc
@@ -20,4 +21,4 @@ if [ -n "$NPM_AUTH_TOKEN" ]; then
   chmod 0600 "$NPM_CONFIG_USERCONFIG"
 fi
 
-sh -c "yarn $*"
+sh -c "yarn test"
