@@ -2,7 +2,7 @@
 
 set -e
 apk add --no-cache libstdc++; 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash;
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | sh;
 echo 'source $HOME/.profile;' >> $HOME/.zshrc;
 echo 'export NVM_NODEJS_ORG_MIRROR=https://unofficial-builds.nodejs.org/download/release;' >> $HOME/.profile;
 echo 'nvm_get_arch() { nvm_echo "x64-musl"; }' >> $HOME/.profile;

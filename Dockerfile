@@ -13,7 +13,7 @@ COPY LICENSE README.md /
 
 RUN apk update && \
     apk upgrade && \
-    apk add git openssh
+    apk add git openssh curl
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
