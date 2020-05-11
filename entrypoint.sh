@@ -7,7 +7,7 @@ echo 'source $HOME/.profile;' >> $HOME/.zshrc;
 echo 'export NVM_NODEJS_ORG_MIRROR=https://unofficial-builds.nodejs.org/download/release;' >> $HOME/.profile;
 echo 'nvm_get_arch() { nvm_echo "x64-musl"; }' >> $HOME/.profile;
 NVM_DIR="$HOME/.nvm"; source $HOME/.nvm/nvm.sh; source $HOME/.profile;
-
+cd ./api
 nvm install
 
 if [ -n "$NPM_AUTH_TOKEN" ]; then
